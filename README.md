@@ -10,11 +10,11 @@ A personal portfolio website built with **Next.js 14**, **TypeScript**, **Tailwi
 
 **Nazim Rafudeen** is an artist, musician, and developer based in Cape Town, South Africa. This portfolio showcases:
 
-- 🎵 **Original music** (produced as *vetkat*)
-- 📷 **Visual art & collage**
-- ✍️ **Zine/writing** (MDX-based blog)
-- 💻 **Technical work** (React, TypeScript, .NET)
-- ✉️ **Contact & collaboration opportunities**
+- x **Original music** (produced as *vetkat*)
+- x **Visual art & collage**
+- x **Zine/writing** (MDX-based blog)
+- x **Technical work** (React, TypeScript, .NET)
+- x **Contact & collaboration opportunities**
 
 The site combines indie / pop-art / vintage aesthetic with interactive web experiences.
 
