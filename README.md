@@ -1,52 +1,91 @@
-# Nazim's Portfolio
+# portfolio-void
 
-A personal portfolio website built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **Three.js**. Features original music, visual art, technical projects, and a vintage synthwave aesthetic inspired by retro design.
+<!-- Badges: uncomment after adding a LICENSE file and confirming CI -->
+<!-- ![License](https://img.shields.io/github/license/wizard-nazim/portfolio-void) -->
+<!-- ![Last commit](https://img.shields.io/github/last-commit/wizard-nazim/portfolio-void) -->
 
-🎵 **Live:** https://portfolio-murex-beta-w3qzug647r.vercel.app
+> **Status:** This repository is an archived first-generation portfolio. It is no longer deployed. Development continues in a private, two-service distributed system at **[desclution.vercel.app](https://desclution.vercel.app/)**.
 
 ---
 
-## Overview
+A personal portfolio for **Nazim Rafudeen** — artist, musician, and developer based in Cape Town, South Africa. Built with Next.js 14, TypeScript, Tailwind CSS, and Three.js, with a vintage synthwave / newsprint aesthetic.
 
-**Nazim Rafudeen** is an artist, musician, and developer based in Cape Town, South Africa. This portfolio showcases:
+## Table of Contents
 
-- x **Original music** (produced as *vetkat*)
-- x **Visual art & collage**
-- x **Zine/writing** (MDX-based blog)
-- x **Technical work** (React, TypeScript, .NET)
-- x **Contact & collaboration opportunities**
+- [About](#about)
+- [Project Status](#project-status)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Routes](#routes)
+- [Key Features](#key-features)
+- [Getting Started](#getting-started)
+- [Configuration](#configuration)
+- [Authoring Content](#authoring-content)
+- [Deployment](#deployment)
+- [Known Issues & Roadmap](#known-issues--roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Credits & Contact](#credits--contact)
 
-The site combines indie / pop-art / vintage aesthetic with interactive web experiences.
+---
+
+## About
+
+`portfolio-void` was the first version of my personal site published publicly. It collects four strands of work in one place:
+
+- **Original music** — produced and released as *vetkat*
+- **Visual art & collage**
+- **Zine / writing** — MDX-based blog
+- **Technical work** — React, TypeScript, .NET
+
+It was also my learning ground: I used it to get to grips with how Three.js works and to try out creative ideas that didn't need to justify themselves — a zine section, a spinning vinyl player, and so on.
+
+### Notes from the author
+
+> The system design follows a component-architecture approach, with a pinch of hope and dreams doing the heavy lifting for the 3D rendering. That code is a mess. Mapping GIFs, images, and videos onto Three.js objects meant stacking simultaneous tags on meshes just to get identifiers logged to the console, so I could work out which object needed changing and how to attach a component to it in place. Painful — and I learned a lot.
+>
+> — *wizard nazim*
+
+The successor project fixes this with a cleaner separation of concerns. This repo is kept as-is for reference.
+
+---
+
+## Project Status
+
+| | |
+|---|---|
+| **Repository** | Archived / reference only |
+| **Live site** | No — deployment closed |
+| **Former URL** | `portfolio-murex-beta-w3qzug647r.vercel.app` (offline) |
+| **Current site** | [desclution.vercel.app](https://desclution.vercel.app/) |
+| **Successor architecture** | Private repos, two services, self-hosted homelab server reachable over Tailscale |
 
 ---
 
 ## Tech Stack
 
-| Layer | Tech |
-|-------|------|
-| **Frontend** | Next.js 14 (App Router) · React 18 |
+| Layer | Technology |
+|---|---|
+| **Framework** | Next.js 14 (App Router) |
+| **UI** | React 18 |
 | **Language** | TypeScript |
-| **Styling** | Tailwind CSS v4 · CSS Grid · CSS animations |
-| **3D Graphics** | Three.js · React Three Fiber |
-| **Content** | MDX (for zine posts) |
-| **Forms** | Formspree (contact form) |
+| **Styling** | Tailwind CSS · CSS Grid · CSS animations |
+| **3D** | Three.js · React Three Fiber · Drei |
+| **Content** | MDX (zine posts) |
+| **Forms** | Formspree |
 | **Deployment** | Vercel |
 | **Analytics** | Vercel Analytics |
 
-**Language composition:**
-- TypeScript: 63%
-- CSS: 32.7%
-- MDX: 3.9%
-- JavaScript: 0.4%
+**Language composition:** TypeScript 63% · CSS 32.7% · MDX 3.9% · JavaScript 0.4%
 
 ---
 
 ## Project Structure
 
 ```
-nazim-portfolio/
+portfolio-void/
 ├── app/                          # Next.js App Router
-│   ├── page.tsx                  # Homepage with hero & latest cards
+│   ├── page.tsx                  # Homepage — hero + latest drops
 │   ├── layout.tsx                # Root layout (Shell, fonts, globals)
 │   ├── globals.css               # CSS variables, scanlines, base styles
 │   ├── art/page.tsx              # Art gallery grid + lightbox
@@ -59,7 +98,7 @@ nazim-portfolio/
 ├── src/
 │   ├── components/               # Reusable React components
 │   │   ├── Shell.tsx             # Global layout (logo, header, nav, footer)
-│   │   ├── MagTitle.tsx          # "NAZIM" magazine letters
+│   │   ├── MagTitle.tsx          # "NAZIM" magazine letter tiles
 │   │   ├── Ticker.tsx            # Scrolling header ticker
 │   │   ├── NavSidebar.tsx        # Left navigation
 │   │   ├── Footer.tsx            # Footer bar
@@ -73,7 +112,7 @@ nazim-portfolio/
 │   │   ├── SocialCard.tsx        # Social link card
 │   │   ├── HeroSceneWrapper.tsx  # Three.js 3D hero scene
 │   │   └── mdx/                  # MDX custom components
-│   │       ├── EmbedTrack.tsx    # SoundCloud/Spotify embeds
+│   │       ├── EmbedTrack.tsx    # SoundCloud / Spotify embeds
 │   │       └── Pullquote.tsx     # Styled blockquotes
 │   └── data/                     # Static data
 │       ├── tracks.ts             # Music tracklist
@@ -91,9 +130,9 @@ nazim-portfolio/
 │   ├── bg.gif                    # Homepage background
 │   ├── homepage-gif.gif          # Hero fallback (2D)
 │   └── images/
-├── next.config.mjs               # Next.js configuration
-├── tailwind.config.ts            # Tailwind config
-├── tsconfig.json                 # TypeScript config
+├── next.config.mjs
+├── tailwind.config.ts
+├── tsconfig.json
 └── package.json
 ```
 
@@ -102,57 +141,59 @@ nazim-portfolio/
 ## Routes
 
 | Route | Description |
-|-------|-------------|
-| `/` | **Homepage** – Hero with intro + latest drops (music, zine, dev) |
-| `/art` | **Art gallery** – Visual works with lightbox |
-| `/music` | **Music player** – Disc player + track list + SoundCloud embeds |
-| `/zine` | **Zine index** – Featured issue + all posts with tag filters |
-| `/zine/[slug]` | **Individual post** – MDX-rendered article |
-| `/cv` | **CV** – HTML resume + PDF download link |
-| `/contact` | **Contact** – Social links + Formspree contact form |
+|---|---|
+| `/` | Homepage — hero with intro and latest drops (music, zine, dev) |
+| `/art` | Art gallery with lightbox |
+| `/music` | Disc player, track list, and SoundCloud embeds |
+| `/zine` | Zine index — featured issue plus all posts with tag filters |
+| `/zine/[slug]` | Individual post, rendered from MDX |
+| `/cv` | CV — HTML resume plus PDF download |
+| `/contact` | Social links and contact form |
 
 ---
 
 ## Key Features
 
-### 🎵 Disc Player
-- Spinning vinyl with animated tonearm
-- Play/pause · previous/next · shuffle controls
+### Disc Player
+
+- Spinning vinyl with an animated tonearm
+- Play/pause, previous/next, shuffle
 - Track cover art display
-- Progress bar (visual)
-- Glow ring animation when playing
+- Visual progress bar
+- Glow-ring animation while playing
 - Integrated SoundCloud embeds
 
-**Tracks:**
-- **Ｐａｔｉｅｎｃｅ (صبر)** – 2025 single
-- **Corner Shop** – 2023
-- **ulontitled**, **upside down id**, **idea 2**, **idea** – 2025–26
+**Tracks:** Ｐａｔｉｅｎｃｅ (صبر) — 2025 single · Corner Shop — 2023 · ulontitled · upside down id · idea 2 · idea — 2025–26
 
-### 🎨 Design System
-**Aesthetic:** Indie / pop-art / vintage / synthwave / newsprint
+### Design System
 
-**Color palette:**
+**Aesthetic:** indie / pop-art / vintage / synthwave / newsprint
+
 ```css
---color-bg:        #0a0a0a       /* deep black */
---color-text:      #f0e6c8       /* cream */
---color-accent:    #ff1aff       /* hot pink */
---color-accent2:   #ff6600       /* orange */
---color-accent3:   #ffcc00       /* yellow */
+--color-bg:      #0a0a0a;  /* deep black */
+--color-text:    #f0e6c8;  /* cream */
+--color-accent:  #ff1aff;  /* hot pink */
+--color-accent2: #ff6600;  /* orange */
+--color-accent3: #ffcc00;  /* yellow */
 ```
 
-**Typography:**
-- Headings: Abril Fatface, Permanent Marker, Righteous
-- Body: Special Elite (warm, handwritten vibe)
-- UI: Courier Prime (monospace labels)
+**Typography**
 
-**Visual effects:**
-- Scanline overlay (via `body::after`)
-- Magazine-style letter tiles (N/A/Z/I/M)
-- Card hover effects (rotate, lift, pink border)
-- Corner fold decorations
+- Display: Abril Fatface, Permanent Marker, Righteous
+- Body: Special Elite
+- UI labels: Courier Prime (monospace)
 
-### 📝 MDX Zine
-Blog posts with rich frontmatter:
+**Visual effects**
+
+- Scanline overlay via `body::after`
+- Magazine-style letter tiles (N / A / Z / I / M)
+- Card hover states — rotate, lift, pink border
+- Corner-fold decorations
+
+### MDX Zine
+
+Posts carry structured frontmatter:
+
 ```yaml
 ---
 title: "Patience with your own process"
@@ -164,69 +205,76 @@ featured: true
 ---
 ```
 
-Custom MDX components:
-- `<EmbedTrack url="..." />` – SoundCloud/Spotify embeds
-- `<Pullquote>text</Pullquote>` – Styled blockquotes
-- Standard Markdown images & lists
+Custom components available inside posts:
 
-### 📞 Contact Form
-Powered by **Formspree** (`mvzyypjp`):
-- Name, email, subject, message fields
-- Real-time validation
-- Success/error states
-- Emails to `nazim.dev@proton.me`
+- `<EmbedTrack url="..." />` — SoundCloud or Spotify embed
+- `<Pullquote>text</Pullquote>` — styled blockquote
+- Standard Markdown images and lists
+
+### Contact Form
+
+Formspree-backed, with name, email, subject, and message fields, real-time validation, and success/error states. Submissions route to `nazim.dev@proton.me`.
 
 ---
 
 ## Getting Started
 
-### 1. Clone & Install
+### Prerequisites
+
+- **Node.js 18.17 or later** (Next.js 14 requirement)
+- npm, pnpm, or yarn
+
+### Install and run
 
 ```bash
-git clone https://github.com/wizard-nazim/portfolio.git
-cd portfolio
+git clone https://github.com/wizard-nazim/portfolio-void.git
+cd portfolio-void
 npm install
-```
-
-### 2. Run Locally
-
-```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000).
 
-### 3. Build for Production
+### Production build
 
 ```bash
 npm run build
 npm run start
 ```
 
-### 4. Lint
+### Lint
 
 ```bash
 npm run lint
 ```
 
----
+### Available scripts
 
-## Environment Setup
-
-No `.env` files required for basic functionality. The site uses:
-- **Vercel Analytics** (automatic on Vercel)
-- **Formspree** (form ID in code: `mvzyypjp`)
-
-### To customize the Formspree form:
-1. Go to [formspree.io](https://formspree.io)
-2. Create a new form or reuse `mvzyypjp`
-3. Update the form ID in `src/components/ContactForm.tsx`
+| Script | Purpose |
+|---|---|
+| `npm run dev` | Local development server |
+| `npm run build` | Production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | ESLint |
 
 ---
 
-## Content & Customization
+## Configuration
 
-### Adding Music Tracks
+No environment variables are required for the core site to run.
+
+**Formspree.** The form ID lives in `src/components/ContactForm.tsx`. Formspree IDs are public by design — they ship to the browser — but you should restrict submissions to your own domains in the Formspree dashboard so the endpoint can't be reused elsewhere. To swap in your own form, create one at [formspree.io](https://formspree.io) and replace the ID.
+
+**Analytics.** Vercel Analytics activates automatically on Vercel deployments and needs no configuration.
+
+**Assets.** `public/cv.pdf` is a placeholder. Replace it with your real CV; the `/cv` download link points at that file.
+
+---
+
+## Authoring Content
+
+### Add a music track
+
 Edit `src/data/tracks.ts`:
 
 ```typescript
@@ -240,11 +288,11 @@ export const tracks = [
     coverArt: "https://...",
     soundcloudUrl: "https://soundcloud.com/vetkat/...",
   },
-  // ...
-]
+];
 ```
 
-### Adding Art
+### Add an artwork
+
 Edit `src/data/artworks.ts`:
 
 ```typescript
@@ -256,12 +304,12 @@ export const artworks = [
     year: 2025,
     imageUrl: "https://...",
   },
-  // ...
-]
+];
 ```
 
-### Writing Zine Posts
-Create new `.mdx` files in `content/zine/`:
+### Write a zine post
+
+Add a new `.mdx` file under `content/zine/`:
 
 ```mdx
 ---
@@ -288,125 +336,62 @@ Your content here.
 
 ## Deployment
 
-### Vercel (Recommended)
+The site targets Vercel:
 
-1. Push your repo to GitHub
-2. Go to [vercel.com](https://vercel.com)
-3. Import your repository
-4. Vercel auto-detects Next.js settings
-5. Click "Deploy"
-6. Each push to `main` auto-deploys
+1. Push the repository to GitHub.
+2. Import it at [vercel.com](https://vercel.com).
+3. Vercel detects the Next.js settings automatically.
+4. Deploy — subsequent pushes to `main` redeploy automatically.
 
-**Custom domain:**
-- In Vercel dashboard, go to Settings → Domains
-- Add your custom domain and follow DNS instructions
+To attach a custom domain, use **Settings → Domains** in the Vercel dashboard and follow the DNS instructions.
 
 ---
 
-## Scripts
+## Known Issues & Roadmap
 
-```json
-{
-  "dev": "next dev",         // Run local dev server
-  "build": "next build",     // Build for production
-  "start": "next start",     // Start production server
-  "lint": "next lint"        // Run ESLint
-}
-```
+**Known issues**
 
----
+- The music player is broken.
+- The 3D hero scene code is difficult to maintain — object-to-component mapping relies on manually stacked mesh tags and console logging.
+- `tsconfig.tsbuildinfo` is tracked in version control and should be ignored.
 
-## Dependencies
+**Planned improvements**
 
-**Production:**
-- `next` (14.2+) – React framework
-- `react`, `react-dom` (18.3+)
-- `three` (0.168) – 3D graphics
-- `@react-three/fiber` (8.18) – React wrapper for Three.js
-- `@react-three/drei` (9.122) – Three.js utilities
-- `@formspree/react` (2.5+) – Contact form
-- `@vercel/analytics` (2.0+) – Page analytics
+- Refactor the Three.js scene into a declarative, data-driven structure.
+- Add automated tests (none currently exist).
+- Document accessibility behaviour — keyboard navigation, screen-reader support, and `prefers-reduced-motion` handling for the animations and 3D scene.
+- Publish real Lighthouse results to back up the performance claims below.
+- Move the Formspree form ID into an environment variable.
 
-**Development:**
-- `typescript` (5.0+)
-- `tailwindcss` (3.4+)
-- `autoprefixer`
-- `postcss`
-- `eslint` + `eslint-config-next`
-- `@types/react`, `@types/node`, `@types/three`
+**Performance notes**
+
+Pages are statically generated at build time, images are lazy-loaded through `next/image` with configured `remotePatterns`, and Vercel Analytics provides monitoring. *(Specific Lighthouse scores not yet recorded.)*
 
 ---
 
-## Browser Support
+## Contributing
 
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
+This repository is archived and not actively maintained, so pull requests are unlikely to be merged. If you spot something broken or want to discuss the approach, opening an issue is the best route.
 
-*Note: 3D scenes (Three.js) require WebGL support.*
-
----
-
-## Performance
-
-- **Lighthouse optimized** – Images lazy-loaded, CSS critical path inlined
-- **Static generation** – Pages pre-rendered at build time
-- **Image optimization** – Next.js `<Image />` with remotePatterns
-- **Vercel Analytics** – Built-in performance monitoring
-
----
-
-## FAQ
-
-**Q: How do I update the contact form email?**  
-A: In `src/components/ContactForm.tsx`, update the Formspree form ID and configure your email in the Formspree dashboard.
-
-**Q: Can I use my own 3D hero scene?**  
-A: Yes! Edit `src/components/HeroSceneWrapper.tsx`. The `USE_THREE_HERO` toggle in `app/page.tsx` lets you disable 3D and use a 2D fallback.
-
-**Q: How do I download as PDF?**  
-A: Replace `public/cv.pdf` with your actual CV. The link in `/cv` points to this file.
-
-**Q: Can I add a newsletter signup?**  
-A: Yes, integrate a service like Substack or ConvertKit into the footer or a dedicated page.
-
-**Q: How do I change colors?**  
-A: All design tokens are CSS variables in `app/globals.css`:
-
-```css
---color-bg: #0a0a0a;
---color-accent: #ff1aff;
-/* ... update as needed */
-```
+If you fork it for your own portfolio, credit the original design.
 
 ---
 
 ## License
 
-This project is open source. Customization and personal use encouraged. If you fork, please credit the original design.
+**No license file is currently included**, which means the default position applies: all rights reserved. If you intend others to reuse this code, add a `LICENSE` file — MIT is the usual choice for a project like this — and update this section accordingly.
 
 ---
 
-## Credits
+## Credits & Contact
 
-**Built by:** Nazim Rafudeen  
-**Design inspiration:** Indie/synthwave/pop-art/vintage  
-**Audio:** [SoundCloud · vetkat](https://soundcloud.com/vetkat)  
-**Visual:** [Instagram · @nazimrafudeen](https://www.instagram.com/nazimrafudeen/)  
-**Code:** [GitHub · wizard-nazim](https://github.com/wizard-nazim)
+**Built by** Nazim Rafudeen · Cape Town, South Africa
 
----
+- **Music** — [SoundCloud · vetkat](https://soundcloud.com/vetkat)
+- **Visual** — [Instagram · @nazimrafudeen](https://www.instagram.com/nazimrafudeen/)
+- **Code** — [GitHub · wizard-nazim](https://github.com/wizard-nazim)
+- **Email** — nazim.dev@proton.me
 
-## Contact & Social
+Open to collaborations, commissions, and freelance projects.
 
-- 🎵 **SoundCloud:** [vetkat](https://soundcloud.com/vetkat)
-- 📷 **Instagram:** [@nazimrafudeen](https://www.instagram.com/nazimrafudeen/)
-- 💻 **GitHub:** [wizard-nazim](https://github.com/wizard-nazim)
-- ✉️ **Email:** nazim.dev@proton.me
-
-**Available for:** Collaborations · Commissions · Projects · Collabs
-
----
-
-*Handmade with ✦ in Cape Town, 2025*
+*Handmade with ✦ in Cape Town.*
