@@ -1,4 +1,14 @@
+### Notes from the author
+
+> The system design follows a component-architecture approach, with a pinch of hope and dreams doing the heavy lifting for the 3D rendering. That code is a mess. Mapping GIFs, images, and videos onto Three.js objects meant stacking simultaneous tags on meshes just to get identifiers logged to the console, so I could work out which object needed changing and how to attach a component to it in place. Painful — and I learned a lot.
+>
+> — *wizard nazim*
+
+`desclution.vercel.app`: The successor project fixes this with a cleaner separation of concerns.
+
 # portfolio-void
+
+This repo is kept as-is for reference.
 
 <!-- Badges: uncomment after adding a LICENSE file and confirming CI -->
 <!-- ![License](https://img.shields.io/github/license/wizard-nazim/portfolio-void) -->
@@ -40,13 +50,7 @@ A personal portfolio for **Nazim Rafudeen** — artist, musician, and developer 
 
 It was also my learning ground: I used it to get to grips with how Three.js works and to try out creative ideas that didn't need to justify themselves — a zine section, a spinning vinyl player, and so on.
 
-### Notes from the author
 
-> The system design follows a component-architecture approach, with a pinch of hope and dreams doing the heavy lifting for the 3D rendering. That code is a mess. Mapping GIFs, images, and videos onto Three.js objects meant stacking simultaneous tags on meshes just to get identifiers logged to the console, so I could work out which object needed changing and how to attach a component to it in place. Painful — and I learned a lot.
->
-> — *wizard nazim*
-
-The successor project fixes this with a cleaner separation of concerns. This repo is kept as-is for reference.
 
 ---
 
