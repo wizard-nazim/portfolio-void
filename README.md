@@ -4,17 +4,15 @@
 >
 > — *wizard nazim*
 
-`desclution.vercel.app`: The successor project fixes this with a cleaner separation of concerns.
-
-# portfolio-void
+The successor project fixes this with a cleaner separation of concerns.
 
 This repo is kept as-is for reference.
+
+> **Status:** This repository is an archived first-generation portfolio. It is no longer deployed. Development continues in a private, two-service distributed system at **[desclution.vercel.app](https://desclution.vercel.app/)**.
 
 <!-- Badges: uncomment after adding a LICENSE file and confirming CI -->
 <!-- ![License](https://img.shields.io/github/license/wizard-nazim/portfolio-void) -->
 <!-- ![Last commit](https://img.shields.io/github/last-commit/wizard-nazim/portfolio-void) -->
-
-> **Status:** This repository is an archived first-generation portfolio. It is no longer deployed. Development continues in a private, two-service distributed system at **[desclution.vercel.app](https://desclution.vercel.app/)**.
 
 ---
 
