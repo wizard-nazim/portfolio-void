@@ -1,22 +1,32 @@
+<table border="2" align="center">
+   <td width="700" align="center" valign="top">
+      <pre><code>Frontend:</code></pre>
+<img src="https://skillicons.dev/icons?i=react,threejs,ts,nextjs,tailwind&theme=dark" /> </td>
+<br />
+     <td width="700" align="center" valign="top">
+        <pre><code>Tools:</code></pre>
+<img src="https://skillicons.dev/icons?i=blender,ps,premiere,figma&theme=dark" /> </td>
+</table>
+
+
 ### Notes from the author
 
-> The system design follows a component-architecture approach, with a pinch of hope and dreams doing the heavy lifting for the 3D rendering. That code is a mess. Mapping GIFs, images, and videos onto Three.js objects meant stacking simultaneous tags on meshes just to get identifiers logged to the console, so I could work out which object needed changing and how to attach a component to it in place. Painful — and I learned a lot.
+> The system design follows a component-architecture approach, with a pinch of hope and dreams doing the heavy lifting for the 3D rendering. That code is a mess. Mapping GIFs, images, and videos onto Three.js objects meant stacking simultaneous tags on meshes just to get identifiers logged to the console, so I could work out which object needed changing and how to attach a component to it in place. Painful — and I learned a lot. The successor project fixes this with a cleaner separation of concerns.
 >
 > — *wizard nazim*
-
-The successor project fixes this with a cleaner separation of concerns.
 
 This repo is kept as-is for reference.
 
 > **Status:** This repository is an archived first-generation portfolio. It is no longer deployed. Development continues in a private, two-service distributed system at **[desclution.vercel.app](https://desclution.vercel.app/)**.
 
 <!-- Badges: uncomment after adding a LICENSE file and confirming CI -->
-<!-- ![License](https://img.shields.io/github/license/wizard-nazim/portfolio-void) -->
-<!-- ![Last commit](https://img.shields.io/github/last-commit/wizard-nazim/portfolio-void) -->
-
----
 
 A personal portfolio for **Nazim Rafudeen** — artist, musician, and developer based in Cape Town, South Africa. Built with Next.js 14, TypeScript, Tailwind CSS, and Three.js, with a vintage synthwave / newsprint aesthetic.
+
+ ![License](https://img.shields.io/github/license/wizard-nazim/portfolio-void) 
+ ![Last commit](https://img.shields.io/github/last-commit/wizard-nazim/portfolio-void) 
+
+---
 
 ## Table of Contents
 
@@ -39,16 +49,7 @@ A personal portfolio for **Nazim Rafudeen** — artist, musician, and developer 
 
 ## About
 
-`portfolio-void` was the first version of my personal site published publicly. It collects four strands of work in one place:
-
-- **Original music** — produced and released as *vetkat*
-- **Visual art & collage**
-- **Zine / writing** — MDX-based blog
-- **Technical work** — React, TypeScript, .NET
-
-It was also my learning ground: I used it to get to grips with how Three.js works and to try out creative ideas that didn't need to justify themselves — a zine section, a spinning vinyl player, and so on.
-
-
+My learning ground: I used it to get to grips with how Three.js works and to try out creative ideas that didn't need to justify themselves — a zine section, a spinning vinyl player, and so on.
 
 ---
 
@@ -371,7 +372,7 @@ Pages are statically generated at build time, images are lazy-loaded through `ne
 
 ---
 
-## Contributing
+## Contributing! :3
 
 This repository is archived and not actively maintained, so pull requests are unlikely to be merged. If you spot something broken or want to discuss the approach, opening an issue is the best route.
 
@@ -381,7 +382,7 @@ If you fork it for your own portfolio, credit the original design.
 
 ## License
 
-**No license file is currently included**, which means the default position applies: all rights reserved. If you intend others to reuse this code, add a `LICENSE` file — MIT is the usual choice for a project like this — and update this section accordingly.
+MIT
 
 ---
 
@@ -395,5 +396,3 @@ If you fork it for your own portfolio, credit the original design.
 - **Email** — nazim.dev@proton.me
 
 Open to collaborations, commissions, and freelance projects.
-
-*Handmade with ✦ in Cape Town.*
