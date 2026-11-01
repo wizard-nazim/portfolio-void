@@ -16,6 +16,7 @@
       </td>
 </td>
    </table>
+   
 ### Notes from the author
 
 > The system design follows a component-architecture approach, with a pinch of hope and dreams doing the heavy lifting for the 3D rendering. That code is a mess. Mapping GIFs, images, and videos onto Three.js objects meant stacking simultaneous tags on meshes just to get identifiers logged to the console, so I could work out which object needed changing and how to attach a component to it in place. Painful — and I learned a lot. The successor project fixes this with a cleaner separation of concerns.
