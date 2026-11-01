@@ -19,8 +19,6 @@ This repo is kept as-is for reference.
 
 > **Status:** This repository is an archived first-generation portfolio. It is no longer deployed. Development continues in a private, two-service distributed system at **[desclution.vercel.app](https://desclution.vercel.app/)**.
 
-<!-- Badges: uncomment after adding a LICENSE file and confirming CI -->
-
 A personal portfolio for **Nazim Rafudeen** — artist, musician, and developer based in Cape Town, South Africa. Built with Next.js 14, TypeScript, Tailwind CSS, and Three.js, with a vintage synthwave / newsprint aesthetic.
 
  ![License](https://img.shields.io/github/license/wizard-nazim/portfolio-void) 
