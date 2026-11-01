@@ -8,13 +8,14 @@
 <img src="https://skillicons.dev/icons?i=blender,ps,premiere,figma&theme=dark" /> </td>
 </table>
 
-<div align="center">
-         <img width="445" height="427" alt="image" src="https://github.com/user-attachments/assets/f839cadd-4e70-4213-8a5c-9dd438e5f444" />
+<table>
+<td width=500 align="center" valign="top>
       <img width="445" height="427" alt="cute cat" src="https://github.com/user-attachments/assets/4349e933-a149-469e-9adf-5dec1e36fc62" />
-</div>
-
-
-   
+   <td width=500 align="center" valign="top>
+<img width="500" height="427 alt="image" src="https://github.com/user-attachments/assets/a3b78b3e-18e0-43d0-8309-6edf386d5dea" />
+      </td>
+</td>
+   </table>
 ### Notes from the author
 
 > The system design follows a component-architecture approach, with a pinch of hope and dreams doing the heavy lifting for the 3D rendering. That code is a mess. Mapping GIFs, images, and videos onto Three.js objects meant stacking simultaneous tags on meshes just to get identifiers logged to the console, so I could work out which object needed changing and how to attach a component to it in place. Painful — and I learned a lot. The successor project fixes this with a cleaner separation of concerns.
