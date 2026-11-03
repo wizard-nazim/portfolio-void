@@ -10,11 +10,15 @@
 
 <table>
 <td width=500 align="center" valign="top>
-      <img width="445" height="427" alt="cute cat" src="https://github.com/user-attachments/assets/4349e933-a149-469e-9adf-5dec1e36fc62" />
-   <td width=500 align="center" valign="top>
-<img width="500" height="427 alt="image" src="https://github.com/user-attachments/assets/a3b78b3e-18e0-43d0-8309-6edf386d5dea" />
-      </td>
+   <img width="445 height="427" src="https://github.com/user-attachments/assets/4349e933-a149-469e-9adf-5dec1e36fc62" />
+   
 </td>
+   
+   <td width=500 align="center" valign="top>
+      
+<img width="500" height="427" src="https://github.com/user-attachments/assets/a3b78b3e-18e0-43d0-8309-6edf386d5dea" /> 
+
+   </td>
    </table>
    
 ### Notes from the author
